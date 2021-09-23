@@ -41,23 +41,23 @@ public class App {
 		PriorityQueue<int[]> minHeap = new PriorityQueue<int[]>((a, b) -> a[1] - b[1]);
 		minHeap.offer(new int[]{src, 0});
         
-		 while (!minHeap.isEmpty()) { 
-		    int[] node = minHeap.poll();
-		    int vertex = node[0];
-		    int distance = node[1];
-		    System.out.println("Shortest path from vertex : V" + src + 
+		while (!minHeap.isEmpty()) { 
+		   int[] node = minHeap.poll();
+		   int vertex = node[0];
+		   int distance = node[1];
+		   System.out.println("Shortest path from vertex : V" + src + 
 				" to vertex V" + vertex +" with distance " + distance); 
 
-		    // Examine and relax all neighboring vertices if possible 
-		    for (int v = 0; v < n; v++) {
-			if (adjMatrix[vertex][v] > 0) {
-			    int dU = distance, dUV = adjMatrix[vertex][v], dV = distances[v];
-			    // Better path?
-			    if (dU + dUV < dV) {
-				minHeap.offer(new int[]{v, dU + dUV});
-				distances[v] = dU + dUV;
-			    }
-			}
+		   // Examine and relax all neighboring vertices if possible 
+		   for (int v = 0; v < n; v++) {
+		      if (adjMatrix[vertex][v] > 0) {
+			  int dU = distance, dUV = adjMatrix[vertex][v], dV = distances[v];
+			  // Better path?
+			  if (dU + dUV < dV) {
+			     minHeap.offer(new int[]{v, dU + dUV});
+			     distances[v] = dU + dUV;
+			  }
+		       }
 		    }
 		 }
          }
