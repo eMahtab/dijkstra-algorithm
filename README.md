@@ -79,4 +79,39 @@ Shortest path from vertex : V0 to vertex V4 with distance 12
 Shortest path from vertex : V0 to vertex V5 with distance 17
 ```
 
+## Example 2 :
+
 ![Shortest Path - Dijkstra Algorithm](graph-2.jpg?raw=true "Shortest Path")
+
+```java
+public static void main(String[] args) {
+		int numberOfVertices = 5;
+		int[][] edges = {
+				{0,1,10},
+				{0,4,3},
+				{4,1,1},
+				{1,4,4},
+				{1,2,2},
+				{4,2,8},
+				{4,3,2},
+				{3,2,7},
+				{2,3,9}
+				};
+		int startingVertex = 0;
+		findShortestPath(numberOfVertices, edges, startingVertex);
+}
+```
+
+### Code execution Output
+```
+Shortest path from vertex : V0 to vertex V0 with distance 0
+Shortest path from vertex : V0 to vertex V1 with distance 4
+Shortest path from vertex : V0 to vertex V2 with distance 6
+Shortest path from vertex : V0 to vertex V3 with distance 5
+Shortest path from vertex : V0 to vertex V4 with distance 3
+```
+
+## References :
+1. https://www.youtube.com/watch?v=sD0lLYlGCJE (Very good explanation)
+
+
