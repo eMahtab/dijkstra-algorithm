@@ -45,9 +45,6 @@ public class App {
 		   int[] node = minHeap.poll();
 		   int vertex = node[0];
 		   int distance = node[1];
-		   System.out.println("Shortest path from vertex : V" + src + 
-				" to vertex V" + vertex +" with distance " + distance); 
-
 		   // Examine and relax all neighboring vertices if possible 
 		   for (int v = 0; v < n; v++) {
 		      if (adjMatrix[vertex][v] > 0) {
@@ -60,6 +57,10 @@ public class App {
 		       }
 		    }
 		 }
+		 for(int v = 0; v < n; v++) {
+           	      System.out.println("Shortest path from vertex : V" + src + 
+     				" to vertex V" + v +" with distance " + distances[v]); 
+        	 }
          }
 
 }
@@ -71,11 +72,10 @@ public class App {
 ### Code execution Output
 ```
 Shortest path from vertex : V0 to vertex V0 with distance 0
-Shortest path from vertex : V0 to vertex V3 with distance 5
 Shortest path from vertex : V0 to vertex V1 with distance 7
 Shortest path from vertex : V0 to vertex V2 with distance 8
+Shortest path from vertex : V0 to vertex V3 with distance 5
 Shortest path from vertex : V0 to vertex V4 with distance 12
-Shortest path from vertex : V0 to vertex V4 with distance 15
 Shortest path from vertex : V0 to vertex V5 with distance 17
 ```
 
