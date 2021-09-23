@@ -27,7 +27,7 @@ public class App {
 	}
 	
 	public static void findShortestPath(int n, int[][] edges, int src) {
-		// Build the adjacency matrix
+		// Build the adjacency matrix.
 		int adjMatrix[][] = new int[n][n];
 		for (int[] edge: edges) {
 		    adjMatrix[edge[0]][edge[1]] = edge[2];
