@@ -2,7 +2,15 @@
 
 Single Source Shortest Path in a directed graph with non-negative weights using a Priority Queue (Min Heap)
 
-### ❗❗❗ Remember Dijkstra's algorithm doesn't work with negative weights.
+## ❗❗❗ Remember Dijkstra's algorithm doesn't work with negative weights.
+
+## Algorithm :
+1. Take a `distances[]` array and fill it with `Integer.MAX_VALUE` , set `distances[startingVertex] = 0`
+2. Take a `PriorityQueue pq` and pass the comparator to return the minimum weight vertex, `add the startingVertex with weight 0 to pq`
+3. If number of vertices are n, loop over edges **n-1** times (Outer loop)
+4. Loop over all the given edges(u,v) and relax (check if `dU + dUV < dV`) the vertices if possible (Inner loop) and update the distances[v] accordingly.
+5. At the end `distances` array will have **shortest path** to all the vertices from the `startingVertex`
+
 
 # Implementation :
 ```java
