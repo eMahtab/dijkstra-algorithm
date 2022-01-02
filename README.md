@@ -1,6 +1,6 @@
 # Dijkstra Algorithm
 
-Single Source Shortest Path in a directed graph with non-negative weights using a Priority Queue (Min Heap)
+Single Source Shortest Path in a graph with non-negative weights using a Priority Queue (Min Heap)
 
 ## ❗❗❗ Remember Dijkstra's algorithm doesn't work with negative weights.
 
